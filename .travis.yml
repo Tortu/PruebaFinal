@@ -13,7 +13,3 @@ deploy:
 branches:
   only:
   - master
-
-script:
-- ng lint
-- ng build --prod --base-href https://github.com/Tortu/

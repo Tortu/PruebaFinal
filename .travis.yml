@@ -13,8 +13,7 @@ deploy:
 branches:
   only:
   - master
-before_script:
-  - npm install -g @angular/cli
-script:
 
+script:
+- ng lint
 - ng build --prod --base-href https://github.com/Tortu/

@@ -8,8 +8,13 @@ sudo: required
 deploy:
   provider: firebase
   token:
-    secure: "1/jQdLV_8nswjznqTZbUBGTkryR5Qx0AM9AWQIKSulkasxg0vgK44_js33tq8Ovkef"
+    secure: "$FIREBASE_TOKEN"
   project: "integracionc-b8857"
 branches:
   only:
   - master
+before_script:
+  - npm install -g @angular/cli
+script:
+- ng lint
+- ng build --prod --base-href https://github.com/Tortu/
